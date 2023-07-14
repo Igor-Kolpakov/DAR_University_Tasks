@@ -31,17 +31,38 @@ public class StarTriangle {
         }
         System.out.println();
      */
-    int width;
+    private int width;
+
+    public StarTriangle () { }
 
     public StarTriangle(int width) {
-        width = width;
+        this.width = width;
+    }
+
+    public int starLimitInput() {
+        Scanner in = new Scanner(System.in);
+        System.out.print("¬ведите предел звездочек: ");
+        width = in.nextInt();
+        return width;
+    }
+    public void setWidth(int width) {
+        this.width = width;
+    }
+
+    public int getWidth() {
+        return width;
     }
 
     @Override
     public String toString() {
-        width++;
-        return "[" +
-                "*" +
-                "]";
+        return "[*]";
     }
 }
+
+   /*public void starsMakingProcess() {
+        for (int i2 = 0; i2 <= this.width; i2++) {
+            for (int j = 0; j <= i2; j++) {
+                System.out.print("*");
+            }
+        }
+    }*/
