@@ -44,27 +44,75 @@ public class Main {
         }
         */
 
-
+        /*
         boolean close = false;
-        PhoneBook phoneBookOutput = new PhoneBook();
+        CashPhoneBook cashPhoneBookOutput = new CashPhoneBook();
         while (!close) {
-            phoneBookOutput.options();
-            switch (phoneBookOutput.optionInput()) {
-                case (1) : phoneBookOutput.allContactsFromCashMapOutput();
+            InputDataInterface.phoneBookOptions();
+            switch (InputDataInterface.optionInput()) {
+                case (1) -> { cashPhoneBookOutput.allContactsFromCashMapOutput(); }
+                case (2) -> { cashPhoneBookOutput.newContactWriteInEmptyCashMap(); }
+                case (3) -> { cashPhoneBookOutput.contactInformationUpdateInCashPhoneBook();}
+                case (4) -> { cashPhoneBookOutput.contactNameSearchInCashUserPhoneBook(); }
+                case (5) -> { close = true; }
+            }
+        }*/
 
-                case (2) :
-                    phoneBookOutput.newContactWriteInEmptyCashMap();
-                    phoneBookOutput.optionInput();
+        /*
+        ArrayListTasks colors = new ArrayListTasks();
+        boolean close = false;
+        while (!close) {
+            InformationOutputInterface.colorOptions();
+            switch (InputDataInterface.optionInput()) {
+                case (1) -> { colors.colorsInputInArrayList(); }
+                case (2) -> { colors.colorsOutput(); }
+                case (3) -> { colors.colorsForCheckInput(); }
+                case (4) -> { colors.twoArrayListCheck();}
+                case (5) -> { close = true; }
+            }
+        } */
 
-                case (3) :
+        /*
+        LinkedListTasks element = new LinkedListTasks();
+        boolean close = false;
+        while (!close) {
+            InformationOutputInterface.linkedLisOption();
+            switch (InputDataInterface.optionInput()) {
+                case (1) -> { element.linkedListInput(); }
+                case (2) -> { element.linkedListOutput(); }
+                case (3) -> { element.showFirstAndLastElement(); }
+                case (4) -> { element.linkedListUpdateUserInfo();}
+                case (5) -> { close = true; }
+            }
+        } */
 
-                case (4) : phoneBookOutput.contactNameSearchInCashUserPhoneBook();
+        /*
+        HashSetTasks gems = new HashSetTasks();
+        boolean close = false;
+        while (!close) {
+            InformationOutputInterface.hashSetOptions();
+            switch (InputDataInterface.optionInput()) {
+                case (1) -> { gems.hashSetInputForAnna(); }
+                case (2) -> { gems.hashSetOutputForAnna(); }
+                case (3) -> { gems.hashSetInputForIrina(); }
+                case (4) -> { gems.hashSetOutputForIrina(); }
+                case (5) -> { gems.hashSetCheckForAnna(); }
+                case (6) -> { gems.twoHashSetsCheck(); gems.duplicatesOutput();}
+                case (7) -> { close = true; }
+            }
+        } */
 
-                case (5) :
-                    close = true;
-                    break;
+        HashMapTasks animals = new HashMapTasks();
+        boolean close = false;
+        while (!close) {
+            InformationOutputInterface.hashMapOption();
+            switch (InputDataInterface.optionInput()) {
+                case (1) -> { animals.animalsAndActionsInput(); }
+                case (2) -> { animals.animalsAndActionOutput(); }
+                case (3) -> { animals.animalsAndActionCheck(); }
+                case (4) -> { animals.backingUpAnimals(); }
+                case (5) -> { close = true; }
             }
         }
-
     }
 }
