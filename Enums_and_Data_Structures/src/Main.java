@@ -48,27 +48,36 @@ public class Main {
         boolean close = false;
         CashPhoneBook cashPhoneBookOutput = new CashPhoneBook();
         while (!close) {
-            InputDataInterface.phoneBookOptions();
-            switch (InputDataInterface.optionInput()) {
-                case (1) -> { cashPhoneBookOutput.allContactsFromCashMapOutput(); }
-                case (2) -> { cashPhoneBookOutput.newContactWriteInEmptyCashMap(); }
-                case (3) -> { cashPhoneBookOutput.contactInformationUpdateInCashPhoneBook();}
-                case (4) -> { cashPhoneBookOutput.contactNameSearchInCashUserPhoneBook(); }
-                case (5) -> { close = true; }
+            InformationOutputInterface.phoneBookOptions();
+            try {
+                switch (InputDataInterface.optionInput()) {
+                    case (1) -> { cashPhoneBookOutput.allContactsFromCashMapOutput(); }
+                    case (2) -> { cashPhoneBookOutput.newContactWriteInEmptyCashMap(); }
+                    case (3) -> { cashPhoneBookOutput.contactInformationUpdateInCashPhoneBook(); }
+                    case (4) -> { cashPhoneBookOutput.contactNameSearchInCashUserPhoneBook(); }
+                    case (5) -> { close = true; }
+                }
+            } catch (Exception falseInput) {
+                System.out.println("Ошибка ввода");
             }
-        }*/
+        } */
+
 
         /*
         ArrayListTasks colors = new ArrayListTasks();
         boolean close = false;
         while (!close) {
             InformationOutputInterface.colorOptions();
-            switch (InputDataInterface.optionInput()) {
-                case (1) -> { colors.colorsInputInArrayList(); }
-                case (2) -> { colors.colorsOutput(); }
-                case (3) -> { colors.colorsForCheckInput(); }
-                case (4) -> { colors.twoArrayListCheck();}
-                case (5) -> { close = true; }
+            try {
+                switch (InputDataInterface.optionInput()) {
+                    case (1) -> { colors.colorsInputInArrayList(); }
+                    case (2) -> { colors.colorsOutput(); }
+                    case (3) -> { colors.colorsForCheckInput(); }
+                    case (4) -> { colors.twoArrayListCheck(); }
+                    case (5) -> { close = true; }
+                }
+            } catch (Exception falseInput) {
+                System.out.println("Ошибка ввода");
             }
         } */
 
@@ -77,12 +86,16 @@ public class Main {
         boolean close = false;
         while (!close) {
             InformationOutputInterface.linkedLisOption();
-            switch (InputDataInterface.optionInput()) {
-                case (1) -> { element.linkedListInput(); }
-                case (2) -> { element.linkedListOutput(); }
-                case (3) -> { element.showFirstAndLastElement(); }
-                case (4) -> { element.linkedListUpdateUserInfo();}
-                case (5) -> { close = true; }
+            try {
+                switch (InputDataInterface.optionInput()) {
+                    case (1) -> { element.linkedListInput(); }
+                    case (2) -> { element.linkedListOutput(); }
+                    case (3) -> { element.showFirstAndLastElement(); }
+                    case (4) -> { element.linkedListUpdateUserInfo(); }
+                    case (5) -> { close = true; }
+                }
+            } catch (Exception falseInput) {
+                System.out.println("Ошибка ввода");
             }
         } */
 
@@ -91,14 +104,18 @@ public class Main {
         boolean close = false;
         while (!close) {
             InformationOutputInterface.hashSetOptions();
-            switch (InputDataInterface.optionInput()) {
-                case (1) -> { gems.hashSetInputForAnna(); }
-                case (2) -> { gems.hashSetOutputForAnna(); }
-                case (3) -> { gems.hashSetInputForIrina(); }
-                case (4) -> { gems.hashSetOutputForIrina(); }
-                case (5) -> { gems.hashSetCheckForAnna(); }
-                case (6) -> { gems.twoHashSetsCheck(); gems.duplicatesOutput();}
-                case (7) -> { close = true; }
+            try {
+                switch (InputDataInterface.optionInput()) {
+                    case (1) -> { gems.hashSetInputForAnna(); }
+                    case (2) -> { gems.hashSetOutputForAnna(); }
+                    case (3) -> { gems.hashSetInputForIrina(); }
+                    case (4) -> { gems.hashSetOutputForIrina(); }
+                    case (5) -> { gems.hashSetCheckForAnna(); }
+                    case (6) -> { gems.twoHashSetsCheck(); gems.duplicatesOutput(); }
+                    case (7) -> { close = true; }
+                }
+            } catch (Exception falseInput) {
+                System.out.println("Ошибка ввода");
             }
         } */
 
@@ -106,12 +123,16 @@ public class Main {
         boolean close = false;
         while (!close) {
             InformationOutputInterface.hashMapOption();
-            switch (InputDataInterface.optionInput()) {
-                case (1) -> { animals.animalsAndActionsInput(); }
-                case (2) -> { animals.animalsAndActionOutput(); }
-                case (3) -> { animals.animalsAndActionCheck(); }
-                case (4) -> { animals.backingUpAnimals(); }
-                case (5) -> { close = true; }
+            try {
+                switch (InputDataInterface.optionInput()) {
+                    case (1) -> { animals.animalsAndActionsInput(); }
+                    case (2) -> { animals.animalsAndActionOutput(); }
+                    case (3) -> { animals.animalsAndActionCheck(); }
+                    case (4) -> { animals.backingUpAnimals(); }
+                    case (5) -> { close = true; }
+                }
+            } catch (Exception falseInput) {
+                System.out.println("Ошибка ввода");
             }
         }
     }
