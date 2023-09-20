@@ -15,8 +15,9 @@ public class PostRequest {
     private String clientId;
     @NotNull(message = "Post Recipient ID can not be empty")
     private String postRecipientId;
-    @NotNull(message = "Name can not be empty")
-    @Size(min = 2, max = 16, message = "Post Item must be greater than 2 and less than 16")
+    @NotNull(message = "Post item can not be empty")
     private String postItem;
+    @NotNull(message = "Destination address can not be empty")
+    private String address;
     private String status;
 }

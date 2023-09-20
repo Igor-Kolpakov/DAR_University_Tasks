@@ -13,6 +13,7 @@ public class PostResponse {
     private String clientId;
     private String postRecipientId;
     private String postItem;
+    private String address;
     private String status;
 
 }

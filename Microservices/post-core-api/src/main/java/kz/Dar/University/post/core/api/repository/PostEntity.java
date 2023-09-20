@@ -22,6 +22,8 @@ public class PostEntity {
     private String postRecipientId;
     @Column(unique = true, nullable = false, length = 36, name ="post_item")
     private String postItem;
+    @Column()
+    private String address;
     @Column(nullable = false, length = 50, name ="status")
     private String status;
 

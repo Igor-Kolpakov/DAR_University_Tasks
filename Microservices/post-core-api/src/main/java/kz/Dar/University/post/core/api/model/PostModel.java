@@ -10,13 +10,15 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Data
 public class PostModel {
+
     private String postId;
     @NotNull(message = "Client ID can not be empty")
     private String clientId;
     @NotNull(message = "Post Recipient ID can not be empty")
     private String postRecipientId;
-    @NotNull(message = "Name can not be empty")
+    @NotNull(message = "Post Item can not be empty")
     @Size(min = 2, max = 16, message = "Post Item must be greater than 2 and less than 16")
     private String postItem;
     private String status;
+
 }
